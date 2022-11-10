@@ -1,3 +1,4 @@
+#현재 위치 좌표 알려주는 py파일
 import requests, json
 
 def current_location():
