@@ -5,10 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>animal_HP</title>
+    <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
-    <p id = "jsonCheck">wasd</p>
+    <div class="input">
+        <input placeholder = "행정구역을 입력하세요." id = "inputArea"></input>
+        <button id="addArea">검색</button>
+    </div>
+    <!-- animal_HP를 이용해서 자신이 있는 곳 좌표 가져오기 -->
+    <div class="showContent">
+        <ui id = "show_hp_list">
+        </ui>
+    </div>
+    <ul>
+        <li>위도:<span id="latitude"></span></li>
+        <li>경도:<span id="longitude"></span></li>
+    </ul>
+    <div id="map"></div>
+   
 
     <script src = "js/main.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 사용하세요"></script>
 </body>
 </html>
