@@ -16,12 +16,26 @@
     </div>
     <!-- animal_HP를 이용해서 자신이 있는 곳 좌표 가져오기 -->
     <div class="showContent">
-        <ui id = "show_hp_list">
-        </ui>
+        <div class="myInfo">
+            <p>my 위치 정보</p>
+            <p>주소 : <span class="myAddress"></span></p>
+            <p>위도 : <span id="latitude"></span></p>
+            <p>경도 : <span id="longitude"></span></p>
+        </div>
+        <div class="hpInfo">
+            <p>선택한 병원 위치 정보</p>
+            <p>행정시 : <span class="hpHang"></span></p>
+            <p>위도, 경도 : <span class="hpLatLon"></span></p>
+            <p>주소 : <span class="hpAddress"></span></p>
+        </div>
+        
+        <div class="animal_hp_list">
+            <ui id = "show_hp_list">
+            </ui>
+        </div>
+        
     </div>
     <ul>
-        <li>위도:<span id="latitude"></span></li>
-        <li>경도:<span id="longitude"></span></li>
     </ul>
    
 
@@ -34,15 +48,14 @@
     </div>
    
     
-    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+
     
     
     
 </body>
-<script src = "js/main.js"></script>
-
+    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+    <script src = "js/main.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=00692daaea3c9ac642f66fb543223ad8&libraries=services"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=00692daaea3c9ac642f66fb543223ad8"></script>
-    <script src = "js/ex.js"></script>
     <script src="js/map.js"></script>
 </html>

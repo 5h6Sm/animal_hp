@@ -25,8 +25,15 @@ let address = [];
 let printJson = (json) => {
     let check = document.querySelector("#show_hp_list");
     let count = parseInt(json['Animalhosptl'][0]['head'][0]['list_total_count']);
-    let hp_name = []; //병원 이름 담는 배열
     let positions = new Array(); //객체 담는 배열
+
+    let myHang = document.querySelector(".hpHang");
+    let myLatLon = document.querySelector(".hpLatLon");
+    let myaddress = document.querySelector(".hpAddress");
+
+    if(myaddress.innerText == 'undefined'){
+        myaddress.innerText = "";
+    }
 
     try {
         if (json['Animalhosptl'][0]['head'][1]['RESULT']['CODE'] == 'INFO-000'){
@@ -55,9 +62,9 @@ let printJson = (json) => {
     }catch{
         check.innerHTML = "없음";
     }
-
-    console.log(positions);    
-    
+  
+    let sa = new Array();
+    var marker_s;
     // 마커 이미지의 이미지 주소입니다
     var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
         
@@ -69,15 +76,53 @@ let printJson = (json) => {
         // 마커 이미지를 생성합니다    
         var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
         
+
         // 마커를 생성합니다
-        var marker = new kakao.maps.Marker({
+        marker_s = {
             map: map, // 마커를 표시할 지도
             position: positions[i].latlng, // 마커를 표시할 위치
             title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-            image : markerImage // 마커 이미지 
-        });
+            image : markerImage, // 마커 이미지 
+            clickable: true,
+            address : positions[i].address,
+            index : i
+        };
+
+        var marker = new kakao.maps.Marker(marker_s);
+        sa.push(marker_s);
+
+         // 마커에 표시할 인포윈도우를 생성합니다 
+        var infowindow = new kakao.maps.InfoWindow({
+            content: positions[i].title // 인포윈도우에 표시할 내용
+         });
+
+        kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow)
+        );
+        kakao.maps.event.addListener(marker, 'mouseout', 
+            makeOutListener(infowindow)
+        );
+     }   
+
+    function makeOverListener(map, marker, infowindow) {
+        return function() {
+            infowindow.open(map, marker);
+            
+            myHang.innerText = document.querySelector("#inputArea").value;
+            
+            for(let i = 0; i<positions.length; i++){
+                if(marker.Gb == positions[i].title){
+                    // console.log(sa[i].index);
+                    myLatLon.innerText = sa[i].position;
+                    myaddress.innerText = sa[i].address;
+                }
+            }
+        };
     }
-    
+    function makeOutListener(infowindow) {
+        return function() {
+            infowindow.close();
+        };
+    }
 }
 
 let searchBtn = document.querySelector("#addArea");
@@ -86,13 +131,10 @@ searchBtn.addEventListener("click", function(){
     inp(SIGUN_NM);
 });
 
-
 //사용자의 위도, 경도 표시
 function pog() {        
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition (function(pos) {
-            // lat.innerText = pos.coords.latitude;
-            // lon.innerText = pos.coords.longitude;
             $('#latitude').html(pos.coords.latitude);     // 위도
             $('#longitude').html(pos.coords.longitude); // 경도
         });

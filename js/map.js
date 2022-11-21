@@ -1,6 +1,5 @@
 let lat = document.querySelector("#latitude").innerText;
 let lon = document.querySelector("#longitude").innerText;
-console.log(lat, lon);
 
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
@@ -29,8 +28,6 @@ infowindow.open(map, marker);
 
 map.setCenter(coords);
 
-
-
 // 현재 지도 중심좌표로 주소를 검색해서 지도 좌측 상단에 표시합니다
 searchAddrFromCoords(map.getCenter(), displayCenterInfo);
 
@@ -42,17 +39,9 @@ kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
             detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
             
             var content = '<div class="bAddr">' +
-                            '<span class="title">법정동 주소정보</span>' + 
+                            '<span class="title"></span>' + 
                             detailAddr + 
                         '</div>';
-
-            // 마커를 클릭한 위치에 표시합니다 
-            marker.setPosition(mouseEvent.latLng);
-            marker.setMap(map);
-
-            // 인포윈도우에 클릭한 위치에 대한 법정동 상세 주소정보를 표시합니다
-            infowindow.setContent(content);
-            infowindow.open(map, marker);
         }   
     });
 });
@@ -81,9 +70,12 @@ function displayCenterInfo(result, status) {
             // 행정동의 region_type 값은 'H' 이므로
             if (result[i].region_type === 'H') {
                 infoDiv.innerHTML = result[i].address_name;
+                let myAddress = document.querySelector(".myAddress");
+                myAddress.innerText = result[i].address_name;
                 break;
             }
         }
     }    
 }
+
 
