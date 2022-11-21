@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>animal_HP</title>
     <link rel="stylesheet" href="css/default.css">
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    
 </head>
 <body>
     <div class="input">
@@ -21,11 +23,25 @@
         <li>위도:<span id="latitude"></span></li>
         <li>경도:<span id="longitude"></span></li>
     </ul>
-    <div id="map"></div>
    
 
-    <script src = "js/main.js"></script>
+    <div class="map_wrap">
+        <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+        <div class="hAddr">
+            <span class="title">지도중심기준 행정동 주소정보</span>
+            <span id="centerAddr"></span>
+        </div>
+    </div>
+   
+    
     <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 사용하세요"></script>
+    
+    <script src = "js/main.js"></script>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=00692daaea3c9ac642f66fb543223ad8&libraries=services"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=00692daaea3c9ac642f66fb543223ad8"></script>
+    <script src = "js/ex.js"></script>
+    <script src="js/map.js"></script>
+    
 </body>
 </html>
