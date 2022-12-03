@@ -32,41 +32,21 @@
 ## 프로젝트 기능 설명
 ### desktop
 + main
-![image]()
-![image](https://user-images.githubusercontent.com/99901580/176686662-e23265eb-c9d6-447d-acb8-aa715fccf0ee.png)
+![image](https://user-images.githubusercontent.com/87300203/205448570-e367d27d-b495-427c-9c59-7bd2cc2be8bd.JPG)
+![image](https://user-images.githubusercontent.com/87300203/205448566-ac97931a-8707-449e-bb21-ba810000a623.JPG)
+![image](https://user-images.githubusercontent.com/87300203/205448559-92e3cab5-da70-4e14-a124-ccbc2dd084ab.JPG)
 
->> + 왼쪽 위 버튼을 누르면 연도 선택 가능
->>> + 2000
->>> + 1960
->>> + 1900
+> + 행정시 입력으로 입력한 행정구역의 동물병원 정보 출력
+> + 지도에 마커 표시
+> + 투두리스트 작성 가능
+> + 자동 슬라이드(3초)
+> + 공식 사이트 임베디드, 캘린더로 일정 확인
 
->> + 오른쪽 위 버튼을 누르면 밑에 뜨는 더 알기 페이지로 넘어감
++ fes
+![image](https://user-images.githubusercontent.com/87300203/205448565-db499b8b-a31b-4699-9c86-f648b9ccd15a.jpg)
+> + 익명게시판 활용 가능
 
-+ more page
-![image](https://user-images.githubusercontent.com/99901580/176696212-09747841-1cb6-4ab7-b7c5-a28e8dc32282.png)
->> + 역사에 대해 공부하며 어려웠던 단어들을 추가적으로 공부할 수 있음
-
-+ text page
-![image](https://user-images.githubusercontent.com/99901580/176689230-f3320382-8d57-4323-be1c-4671853ba55d.png)
->> + 왼쪽 본문에 한 줄로 사건을 간결하게 정리함
->> + 오른쪽에서 관련 사건에 대한 사진을 볼 수 있음
-
-
-### tablet
-+ main
-![image](https://user-images.githubusercontent.com/99901580/176696600-81fddf99-6757-4265-8ead-1c30281e96b7.png)
-![image](https://user-images.githubusercontent.com/99901580/176696899-c27004af-0232-40ea-86ca-1700cad06dc5.png)
-+ more
-8ead-1c30281e96b7.png)
-![image](https://user-images.githubusercontent.com/99901580/176696692-d583cfb2-6c7f-4fcb-a80a-e9feee76792a.png)
-+ text
-
-
-### mobile
-+ main
-![image](https://user-images.githubusercontent.com/99901580/176697790-836a5637-52c0-458e-b7bf-c944173f96a1.png)
-![image](https://user-images.githubusercontent.com/99901580/176697407-8a3bd5cf-ed27-4e4d-b9be-1d521494416a.png)
-+ more
-![image](https://user-images.githubusercontent.com/99901580/176699496-c083a141-ae89-41d4-a525-0932313e1f30.png)
-+ text
-![image](https://user-images.githubusercontent.com/99901580/176698985-1264d2ae-f5c9-44d1-a239-6e7d687f6b14.png)
++ notice
+![image](https://user-images.githubusercontent.com/87300203/205448564-eb8da2b0-4e1e-408c-b83b-4f33f40344a3.JPG)
+![image](https://user-images.githubusercontent.com/87300203/205448568-241538e2-1a9b-413a-bc61-e183c86e88de.JPG)
+> + 전체 알림 및 태그에 따라 분류된 알림 확인 가능
