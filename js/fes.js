@@ -60,3 +60,34 @@ function dataCancel(e) {
 }
 
 todolist.addEventListener("click", dataCancel, false);
+
+let showMenu = document.querySelector('.nav-list2');
+let btn = document.querySelector('.menu');
+
+btn.addEventListener("click", function(){
+    showMenu.classList.toggle('showMenu') 
+})
+
+
+const toggleMenu = (toggleId, navListId) => {
+    const toggle = document.getElementById(toggleId);
+    const navList = document.getElementById(navListId);
+    const toggleIcon = toggle.getElementsByTagName("i")[0];
+
+
+    if(toggle && navList){
+        //add : 추가, remove : 제거, toggle : 추가/제거
+        toggle.addEventListener('click', () =>{
+            console.log("asfd")
+            //toggle menu   
+            // navList.classList.toggle('show-menu');
+            //change toggle icon : bx-menu <-> bx-x-circle
+            toggleIcon.classList.toggle("bx-menu");
+            toggleIcon.classList.toggle("bx-x");
+
+
+        });
+    }
+
+}
+toggleMenu('menu', 'nav-list2');
