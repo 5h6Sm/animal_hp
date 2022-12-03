@@ -1,61 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>animal_HP</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/main-media.css">
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    
+
+
 </head>
+
 <body>
-    <div class="input">
-        <input placeholder = "행정구역을 입력하세요." id = "inputArea"></input>
-        <button id="addArea">검색</button>
-    </div>
-    <!-- animal_HP를 이용해서 자신이 있는 곳 좌표 가져오기 -->
-    <div class="showContent">
-        <div class="myInfo">
-            <p>my 위치 정보</p>
-            <p>주소 : <span class="myAddress"></span></p>
-            <p>위도 : <span id="latitude"></span></p>
-            <p>경도 : <span id="longitude"></span></p>
+    <header class="header" id="header">
+        <nav class="nav container" id="nav-toggle">
+            <a href="index.html">
+                <i class='bx bxs-cat'></i>
+              </a>
+            <div class="nav-menu">
+                <ul class="nav-list" id="nav-list">
+                    <li class="nav-item">
+                        <a href="./html/notice.html" class="nav-link">&ensp; 알림 &ensp;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./html/fes.html" class="nav-link">&ensp; Fes &ensp;</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="./html/plus.html" class="nav-link">&ensp; 더보기 &ensp;</a>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bxs-user-circle'></i>
+            </div>
+        </nav>
+    </header>
+    <div class="wrap-all-content">
+        <div class="input">
+            <input placeholder="행정구역을 입력하세요." id="inputArea"></input>
+            <button id="addArea">검색</button>
         </div>
-        <div class="hpInfo">
-            <p>선택한 병원 위치 정보</p>
-            <p>행정시 : <span class="hpHang"></span></p>
-            <p>위도, 경도 : <span class="hpLatLon"></span></p>
-            <p>주소 : <span class="hpAddress"></span></p>
-        </div>
-        
-        <div class="animal_hp_list">
-            <ui id = "show_hp_list">
-            </ui>
-        </div>
-        
-    </div>
-    <ul>
-    </ul>
-   
 
-    <div class="map_wrap">
-        <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
-        <div class="hAddr">
-            <span class="title">지도중심기준 행정동 주소정보</span>
-            <span id="centerAddr"></span>
-        </div>
-    </div>
-   
-    
+        <div class="content">
+            <div class="showContent">
+                <div class="myInfo">
+                    <p class="infoTitle">my 위치 정보</p>
+                    <p class="infoText">주소 : <span class="myAddress"></span></p>
+                    <p class="infoText">위도 : <span id="latitude"></span></p>
+                    <p class="infoText">경도 : <span id="longitude"></span></p>
+                </div>
+                <div class="hpInfo">
+                    <p class="infoTitle">선택한 병원 위치 정보</p>
+                    <p class="infoText">행정시 : <span class="hpHang"></span></p>
+                    <p class="infoText">위도, 경도 : <span class="hpLatLon"></span></p>
+                    <p class="infoText">주소 : <span class="hpAddress"></span></p>
+                </div>
 
-    
-    
-    
+                <div class="animal_hp_list">
+                    <p class="infoTitle">병원 리스트</p>
+                    <ui id="show_hp_list">
+                    </ui>
+                </div>
+            </div>
+
+            <div class="mapArea">
+                <p class="infoTitle">지도</p>
+                <div class="map_wrap">
+                    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+                    <div class="hAddr">
+                        <span class="title">지도중심기준 행정동 주소정보</span>
+                        <span id="centerAddr"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="myAnimal">
+                <p class="infoTitle">MY</p>
+                <div class="animalInfo">
+                    <img src="https://i.pinimg.com/originals/5f/a0/39/5fa0394ffb5e08ea56653dd8e514f2e7.jpg" alt=""
+                        style="margin: 5vw 0 1vw 0; width: 70%;">
+                    <p><span class="infoTitle">몽실</span> / 여 / 7세</p>
+                    <div class="wrap-todo">
+                        <input id="inputField" type="text" placeholder="할 일 작성하기">
+                        <!--text 입력창(할일 입력창) 만들기-->
+                        <button id="addToDo"> + </button> <!-- + 버튼 만들기 -->
+                        
+                        <!-- id = inputField에 할일이 입력되고 + 버튼이 눌리면 할일이 나타날 공간 만들기-->
+                    </div>
+                    <div class="to-dos" id="toDoList"> </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="theLine"></div>
+
+        <div class="slideContent">
+            <div class="slide slide_wrap">
+                <div class="slide_item item1">1</div>
+                <div class="slide_item item2">2</div>
+                <div class="slide_item item3">3</div>
+                <div class="slide_item item4">4</div>
+                <div class="slide_item item5">5</div>
+                <div class="slide_prev_button slide_button">◀</div>
+                <div class="slide_next_button slide_button">▶</div>
+                <ul class="slide_pagination"></ul>
+              </div>
+        </div>
+
+
+        <div class="bottom_content">
+            <div class="offical">
+                <div class="twitter__StyledOfficialStore-sc-mlbl85-0 jJrkbS" data-testid="Twitter">
+                    <h2 class="infoTitle section-title__StyledSectionTitle-sc-eqj0pz-0 bpwHmu title"
+                        data-testid="SectionTitle">TWITTER</h2>
+                    <div class="twitter-wrapper">
+                        <div class="twitter-timeline twitter-timeline-rendered"
+                            style="display: flex; margin-top: 0px; margin-bottom: 0px;">
+                            <iframe id="twitter-widget-0" scrolling="no" frameborder="0" class=""
+                                style="  width : 30vw; height: 11494px; display: block; flex-grow: 1;"
+                                title="Twitter Timeline"
+                                src="https://syndication.twitter.com/srv/timeline-profile/screen-name/nijisanji_app?dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19ibHVlX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideBorder=false&amp;hideFooter=false&amp;hideHeader=false&amp;hideScrollBar=false&amp;lang=ja&amp;origin=https%3A%2F%2Fwww.nijisanji.jp%2F&amp;sessionId=0bbd84622629b1867c4e447557b9f94b96dc8361&amp;showHeader=true&amp;showReplies=false&amp;siteScreenName=nijisanji_app&amp;transparent=false&amp;widgetsVersion=a3525f077c700%3A1667415560940"
+                                data-gtm-yt-inspected-6="true" data-gtm-yt-inspected-11="true">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eventCalendar">
+                <h2 class="infoTitle section-title__StyledSectionTitle-sc-eqj0pz-0 bpwHmu title"
+                    data-testid="SectionTitle">CALENDAR</h2>
+                <div class="flex-container">
+                    <div id="prev_btn">
+                        < </div>
+                            <h1><span id="year"></span>년 <span id="month"></span>월</h1>
+                            <div id="next_btn">></div>
+                    </div>
+                    <div id="calendar">
+                        <div class="grid-container days-of-the-week">
+                            <div class="grid-item">일</div>
+                            <div class="grid-item">월</div>
+                            <div class="grid-item">화</div>
+                            <div class="grid-item">수</div>
+                            <div class="grid-item">목</div>
+                            <div class="grid-item">금</div>
+                            <div class="grid-item">토</div>
+                        </div>
+                        <div class="date-grid-container"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="theLine"></div>
+
+            <footer>
+                <p>   
+                    tel. 010-xxxx-xxxx<br>
+                    mail. w2124@e-mirim.hs.kr<br>
+                    MIRIM GIRLS' INFORMATION SCIENCE HIGH SCHOOL
+                </p>
+                <br>
+                <br>
+                <a href="index.html">
+                    <i class='bx bxs-cat'></i>
+                  </a>
+                  <a href="">
+                    <i class='bx bxl-twitter'></i>
+
+                  </a>
+            </footer>
+        </div>
+
+
+
+        <!-- animal_HP를 이용해서 자신이 있는 곳 좌표 가져오기 -->
+
 </body>
-    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
-    <script src = "js/main.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=00692daaea3c9ac642f66fb543223ad8&libraries=services"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=00692daaea3c9ac642f66fb543223ad8"></script>
-    <script src="js/map.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=00692daaea3c9ac642f66fb543223ad8&libraries=services"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=00692daaea3c9ac642f66fb543223ad8"></script>
+<script src="js/todolist.js"></script>
+<script src="js/map.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/slide.js"></script>
+
 </html>

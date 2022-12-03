@@ -1,0 +1,96 @@
+#inputArea{
+    width:90vw;
+    height:2.5vw;
+}
+#addArea{
+    width:4vw;
+    height:2.7vw;
+    background-color: #2D4B70;
+    color: #ffffff;
+    border:none;
+}
+.input{
+    padding:3vw 0 3.3vw 0;
+    display: flex;
+    align-items: center;
+}
+.infoTitle{
+    font-size: 1.3em;
+    font-weight: 600;
+    color:#2D4B70;
+    padding-bottom:0.6vw;
+
+}
+#show_hp_list > li{
+    max-width: 15vw;
+}
+#inputField{
+    margin-bottom:1vw;
+}
+.infoText, #show_hp_list > *{
+    font-size:1em;
+    font-weight: 200;
+}
+.showContent > *{
+    padding-bottom: 1vw;;
+}
+.myInfo > *, #show_hp_list > *, .hpInfo > *{
+    padding-bottom:0.6vw;
+}
+.content{
+    justify-content: space-between;
+    min-height: 100%;
+    height:fit-content;
+}
+.myAnimal{
+    width:25vw;
+    height:40vw;
+
+}
+.animalInfo{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0.1vw 0.1vw 1vw 0.1vw #d6d6d6;
+}
+.animalInfo > *{
+    padding-bottom: 1vw;
+}
+.animalInfo > img{
+    border-radius: 50px;
+    border:solid 0.5px #2D4B70;
+}
+.myAnimal{
+    height:max-content;
+}
+h2{
+    text-align: center;
+}
+.twitter-wrapper{
+    width:100%;
+    height:50vw;
+    overflow: scroll;
+    margin-top:2vw;
+    justify-content: center;
+    align-items: center;
+}
+.offical{
+    width:50%;
+}
+.offical>div{
+    width:90%;
+}
+.bottom_content{
+    width:80%;
+    display: flex;
+    justify-content: space-around;
+}
+.eventCalendar{
+    width:30vw;
+}
+
+

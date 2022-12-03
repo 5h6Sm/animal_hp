@@ -1,0 +1,86 @@
+.nav-item:nth-child(2) > .nav-link{
+    background-color: #2D4B70;
+    border-radius: 8px;
+    color:#ffffff;
+}
+.notice-menu{
+    margin:3vw 0 3vw 0;
+}
+.noticeText{
+    display: block;
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 3vw;
+}
+.notice-list-menu{
+    display: flex;
+}
+.list-items > a{
+    padding:1vw 3vw 1vw 3vw;    
+    background-color: #ffffff;
+    border: solid 1px #2D4B70;
+}
+.list-items > a:hover{
+    cursor: pointer;
+    background-color: #2D4B70;
+    color:#ffffff;
+}
+.input-group{
+    display: flex;
+    margin-bottom:1vw;
+}
+.form-control{
+    height:2vw;
+}
+.btn-outline-secondary{
+    width:3vw;
+    height:2.2vw;
+    margin-left:0.5vw;
+}
+.card-header{
+    margin-bottom: 1vw;
+}
+.todolist{
+    height:20.7vw;
+    overflow: hidden;
+}
+.forum{
+    width:20vw;
+    height:max-content;
+}
+.fes-content{
+    width:100%;
+    display: flex;
+}
+.goods{
+    width:25vw;
+}
+.goods-item{
+    margin:2vw 0 2vw 0;
+}
+.goods-item > img{
+    width:20vw;
+}
+.sText{
+    color:dimgray;
+}
+.goods-span{
+    display: inline;
+}
+.fes-content{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+}
+.card-body{
+    height:20vw;
+}
+.list-group{
+    height:25.2vw;
+}
+.offical{
+    height:90vw;
+}
+.bottom_content{
+    height:100%;
+}

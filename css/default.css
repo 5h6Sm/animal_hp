@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+}
+html{
+  height:max-content;
+}
+body{
+  height: 100%;
+  background:linear-gradient( 135deg, #F3F3F3, #F1FEFF, #FFF1F7 );
+  background-repeat: no-repeat;
+}
 .map_wrap {
     position: relative;
-    width:500px;
-    height: 500px;
+    width:30vw;
+    height: 30vw;
 }
 .title {
   font-weight: bold;
@@ -9,13 +22,13 @@
 }
 .hAddr {
     position: absolute;
-  left: 10px;
-  top: 10px;
-  border-radius: 2px;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.8);
-  z-index: 1;
-  padding: 5px;
+    left: 10px;
+    top: 10px;
+    border-radius: 2px;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    padding: 5px;
 }
 #centerAddr {
   display: block;
@@ -28,3 +41,95 @@
   overflow: hidden;
   white-space: nowrap;
 }
+.content{
+  display: flex;
+}
+
+.nav-list{
+  display: flex;
+}
+.nav-item{
+  margin:0 1vw 0 1vw;
+}
+li{
+  list-style-type: none;
+  text-underline-position: none;
+}
+a{
+  color:#2D4B70;
+  text-decoration: none;
+  font-weight: 900;
+  font-family: 'Noto Sans KR';
+}
+p{
+  font-family: 'Noto Sans KR';
+}
+a:link{
+  color:#2D4B70;
+}
+.nav-link:hover{
+  background-color: #2D4B70;
+  border-radius: 8px;
+  color:#ffffff;
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 5vw 0 5vw;
+  background-color: white;
+  height:70px;
+  box-shadow: 0 0.5px 100px 1px #cdcdcd;
+}
+i{
+  font-size: 35px;
+  color:#2D4B70;
+}
+.wrap-all-content{
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height:max-content;
+}
+.content{
+  width:85vw;
+  height:100%;
+}
+li{
+  font-family: 'Noto Sans KR';
+}
+.theLine{
+  width:80vw;
+  border-bottom:#2D4B70 solid 1px;
+  margin:15vw 0 15vw 0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+footer{
+  width:80%;
+  padding:0 0 1vw 0;
+
+  color:#999;
+}
+footer>p{
+  padding-left: 1.3vw;
+  font-size: 13px;
+}
+footer>a{
+  padding-left: 1.3vw;
+
+}
+.wrap-todo{
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+#inputField{
+  width:60%;
+}
+#addToDo{
+  height:100%;
+}
+

@@ -9,7 +9,7 @@ let inp = (SIGUN_NM) =>{
 
     let url = `https://openapi.gg.go.kr/Animalhosptl?`
                 +`Key=${KEY}`
-                +`&Type=json&pIndex=1&pSize=200&`
+                +`&Type=json&`
                 +`SIGUN_NM=${SIGUN_NM}`;
 
     console.log(url);
@@ -30,37 +30,39 @@ let printJson = (json) => {
     let myHang = document.querySelector(".hpHang");
     let myLatLon = document.querySelector(".hpLatLon");
     let myaddress = document.querySelector(".hpAddress");
+    let myTitle = document.querySelector(".hpTitle");
 
     if(myaddress.innerText == 'undefined'){
         myaddress.innerText = "";
     }
 
+    if(count>200){
+        count = 100;
+    }
+    
     try {
         if (json['Animalhosptl'][0]['head'][1]['RESULT']['CODE'] == 'INFO-000'){
+                check.textContent = "";
             for(let i = 0; i<count; i++){
                 if(json['Animalhosptl'][1]['row'][`${i}`]['BSN_STATE_NM'] != '폐업'){
                     try{
                         let insert_li = document.createElement("li");
                         let add_li = check.appendChild(insert_li);
                         add_li.innerText = json['Animalhosptl'][1]['row'][`${i}`]['BIZPLC_NM'];
-                        address += json['Animalhosptl'][1]['row'][`${i}`]['REFINE_LOTNO_ADDR'] + ', ';
                         let addin = {
                             title : json['Animalhosptl'][1]['row'][`${i}`]['BIZPLC_NM'],
                             address : json['Animalhosptl'][1]['row'][`${i}`]['REFINE_LOTNO_ADDR'],
                             latlng: new kakao.maps.LatLng(json['Animalhosptl'][1]['row'][`${i}`]['REFINE_WGS84_LAT'], json['Animalhosptl'][1]['row'][`${i}`]['REFINE_WGS84_LOGT'])
                         }
-                        positions.push(addin);
-                        // let str = json['Animalhosptl'][1]['row'][`${i}`]['BIZPLC_NM'];
-                        // check.innerHTML += str + ' ';
+                        positions.push(addin);  
+                        }catch{
                         
-                    }catch{
-                        check.innerHTML += "폐업";
                     }
                 }
             }   
         }
     }catch{
-        check.innerHTML = "없음";
+        check.innerText = "없음";
     }
   
     let sa = new Array();
@@ -111,7 +113,7 @@ let printJson = (json) => {
             
             for(let i = 0; i<positions.length; i++){
                 if(marker.Gb == positions[i].title){
-                    // console.log(sa[i].index);
+                    // console.log(sa[i].index);    
                     myLatLon.innerText = sa[i].position;
                     myaddress.innerText = sa[i].address;
                 }
@@ -144,3 +146,20 @@ function pog() {
 };
 
 pog();
+
+const toggleMenu = (toggleId, navListId) => {
+    const toggle = document.getElementById(toggleId);
+    const navList = document.getElementById(navListId);
+    const toggleIcon = toggle.getElementsByTagName("i")[0];
+
+    if(toggle && navList){
+        //add : 추가, remove : 제거, toggle : 추가/제거
+        toggle.addEventListener('click', () =>{
+            //toggle menu
+            // navList.classList.toggle('show-menu');
+            //change toggle icon : bx-menu <-> bx-x-circle
+            toggleIcon.classList.toggle("bx-menu");
+            toggleIcon.classList.toggle("bx-x");
+        });
+    }
+}
