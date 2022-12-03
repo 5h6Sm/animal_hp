@@ -14,7 +14,7 @@
 }
 #calendar {
     max-width: 800px;
-    height: 600px;
+    height: fit-content;
     font-size: var(--h2-font-size);
 }
 .grid-container,

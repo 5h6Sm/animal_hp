@@ -20,7 +20,7 @@
 
 <body>
     <header class="header" id="header">
-        <nav class="nav container" id="nav-toggle">
+        <nav class="nav container">
             <a href="index.html">
                 <i class='bx bxs-cat'></i>
               </a>
@@ -32,22 +32,34 @@
                     <li class="nav-item">
                         <a href="./html/fes.html" class="nav-link">&ensp; Fes &ensp;</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a href="./html/plus.html" class="nav-link">&ensp; 더보기 &ensp;</a>
-                    </li> -->
                 </ul>
             </div>
+            
             <div class="nav-toggle" id="nav-toggle">
                 <i class='bx bxs-user-circle'></i>
+            <div class="menu" id = "menu">
+                <i class='bx bx-menu'></i>
+            </div>
             </div>
         </nav>
     </header>
+    <div class = "show">
+        <ul class="nav-list2" id="nav-list2">
+                <li class="nav-item2">
+                    <a href="./html/notice.html" class="nav-link">&ensp; 알림 &ensp;</a>
+                </li>
+                <li class="nav-item2">
+                    <a href="./html/fes.html" class="nav-link">&ensp; Fes &ensp;</a>
+                </li>
+            </ul>
+    </div>
+            
+    
     <div class="wrap-all-content">
         <div class="input">
             <input placeholder="행정구역을 입력하세요." id="inputArea"></input>
             <button id="addArea">검색</button>
         </div>
-
         <div class="content">
             <div class="showContent">
                 <div class="myInfo">
@@ -85,8 +97,8 @@
             <div class="myAnimal">
                 <p class="infoTitle">MY</p>
                 <div class="animalInfo">
-                    <img src="https://i.pinimg.com/originals/5f/a0/39/5fa0394ffb5e08ea56653dd8e514f2e7.jpg" alt=""
-                        style="margin: 5vw 0 1vw 0; width: 70%;">
+                    <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/28/111500268.2.jpg" alt=""
+                        style="margin: 5vw 0 1vw 0; width: 70%; padding-bottom : 0">
                     <p><span class="infoTitle">몽실</span> / 여 / 7세</p>
                     <div class="wrap-todo">
                         <input id="inputField" type="text" placeholder="할 일 작성하기">
@@ -106,11 +118,21 @@
 
         <div class="slideContent">
             <div class="slide slide_wrap">
-                <div class="slide_item item1">1</div>
-                <div class="slide_item item2">2</div>
-                <div class="slide_item item3">3</div>
-                <div class="slide_item item4">4</div>
-                <div class="slide_item item5">5</div>
+                <div class="slide_item item1">
+                    <img src="https://cdn.imweb.me/upload/S201910012ff964777e0e3/62f9a36ea3cea.jpg" alt="" width="100%">
+                </div>
+                <div class="slide_item item2">
+                    <img src="https://cdn.pixabay.com/photo/2018/05/13/16/57/dog-3397110__480.jpg" alt="" width="100%">
+                </div>
+                <div class="slide_item item3">
+                    <img src="https://newsimg.hankookilbo.com/cms/articlerelease/2020/09/13/c22a51dd-d1f8-48d2-82ad-f18a671078be.jpg" alt="" width="100%">
+                </div>
+                <div class="slide_item item4">
+                    <img src="https://interbalance.org/wp-content/uploads/2021/08/flouffy-VBkIK3qj3QE-unsplash-scaled-e1631077364762.jpg" alt=""width="100%">
+                </div>
+                <div class="slide_item item5">
+                    <img src="https://cdn.lecturernews.com/news/photo/202203/93345_312029_1841.jpg" alt="" width="100%">
+                </div>
                 <div class="slide_prev_button slide_button">◀</div>
                 <div class="slide_next_button slide_button">▶</div>
                 <ul class="slide_pagination"></ul>
@@ -129,7 +151,7 @@
                             <iframe id="twitter-widget-0" scrolling="no" frameborder="0" class=""
                                 style="  width : 30vw; height: 11494px; display: block; flex-grow: 1;"
                                 title="Twitter Timeline"
-                                src="https://syndication.twitter.com/srv/timeline-profile/screen-name/nijisanji_app?dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19ibHVlX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideBorder=false&amp;hideFooter=false&amp;hideHeader=false&amp;hideScrollBar=false&amp;lang=ja&amp;origin=https%3A%2F%2Fwww.nijisanji.jp%2F&amp;sessionId=0bbd84622629b1867c4e447557b9f94b96dc8361&amp;showHeader=true&amp;showReplies=false&amp;siteScreenName=nijisanji_app&amp;transparent=false&amp;widgetsVersion=a3525f077c700%3A1667415560940"
+                                src="https://syndication.twitter.com/srv/timeline-profile/screen-name/go_and_find?dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19ibHVlX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideBorder=false&amp;hideFooter=false&amp;hideHeader=false&amp;hideScrollBar=false&amp;lang=kr&amp;origin=https://www.nijisanji.jp/&amp;sessionId=0bbd84622629b1867c4e447557b9f94b96dc8361&amp;showHeader=true&amp;showReplies=false&amp;siteScreenName=nijisanji_app&amp;transparent=false&amp;widgetsVersion=a3525f077c700:1667415560940"
                                 data-gtm-yt-inspected-6="true" data-gtm-yt-inspected-11="true">
                             </iframe>
                         </div>
@@ -157,6 +179,9 @@
                         </div>
                         <div class="date-grid-container"></div>
                     </div>
+                    <div class="calendarContent">
+
+                    </div>
                 </div>
             </div>
             <div class="theLine"></div>
@@ -172,9 +197,8 @@
                 <a href="index.html">
                     <i class='bx bxs-cat'></i>
                   </a>
-                  <a href="">
+                  <a href="https://twitter.com/go_and_find">
                     <i class='bx bxl-twitter'></i>
-
                   </a>
             </footer>
         </div>

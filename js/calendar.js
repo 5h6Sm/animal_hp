@@ -35,6 +35,42 @@ const setCalendar = (year, month) => {
     let firstDateDiv = dateGridContainerDiv.getElementsByClassName("grid-item")[0];
     firstDateDiv.style.gridColumnStart = firstDay + 1;
 
+    let gridItems = document.querySelectorAll('.grid-item')
+    
+    gridItems[16].addEventListener("mouseover", function(){
+
+        let calendarContentItems = document.querySelector('.calendarContent')
+
+        let newElem = document.createElement("div");
+        newElem.classList.add("calendarContent-item");
+        newElem.innerHTML = "소형견 전용 사료 출시!"
+        calendarContentItems.appendChild(newElem);
+    })
+
+    gridItems[16].addEventListener("mouseout", function(){
+        let calendarContentItems = document.querySelector('.calendarContent');
+        let remove = document.querySelectorAll('.calendarContent-item');
+        for(let i = 0; i<remove.length; i++){
+            calendarContentItems.removeChild(remove[i]);
+        }
+    })
+    gridItems[20].addEventListener("mouseover", function(){
+        let calendarContentItems = document.querySelector('.calendarContent')
+
+        let newElem = document.createElement("div");
+        newElem.classList.add("calendarContent-item");
+        newElem.innerHTML = "**동물병원 개원"
+        calendarContentItems.appendChild(newElem);
+    })
+    gridItems[20].addEventListener("mouseout", function(){
+        let calendarContentItems = document.querySelector('.calendarContent');
+        let remove = document.querySelectorAll('.calendarContent-item');
+        for(let i = 0; i<remove.length; i++){
+            calendarContentItems.removeChild(remove[i]);
+        }
+    })
+
+
     //event
 }
 //prevMonth 함수
@@ -78,3 +114,4 @@ let month = today.getMonth();   //0~11
 month++;
 
 setCalendar(year, month);
+

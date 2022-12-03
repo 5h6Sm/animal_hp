@@ -22,7 +22,7 @@
 
 }
 #show_hp_list > li{
-    max-width: 15vw;
+    width:fit-content   ;
 }
 #inputField{
     margin-bottom:1vw;
@@ -92,5 +92,26 @@ h2{
 .eventCalendar{
     width:30vw;
 }
+.calendarContent{
+    margin-top: 2vw;
+    text-align: left;
+}
+footer>*{
+    text-align: left;
+}
+footer{
+    display: inline-block;
+}
+.bx-menu{
+    display: none;
+}
+.nav-toggle{
+    display: flex;
+}
 
-
+#show_hp_list > li{
+    text-align: left;
+}
+.nav-list2{
+    display: none;
+}

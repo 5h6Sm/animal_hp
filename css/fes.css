@@ -84,3 +84,13 @@
 .bottom_content{
     height:100%;
 }
+.list-group-item>span{
+    overflow: hidden;
+
+}
+.nav-toggle{
+    display: flex;
+}
+.bx-menu{
+    display: none;
+}

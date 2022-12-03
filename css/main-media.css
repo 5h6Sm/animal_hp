@@ -1,0 +1,205 @@
+@media screen and (min-width:768px) and (max-width: 1023px){
+.content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    box-pack: center;
+    }
+.myAnimal{
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    box-ordinal-group: 3;
+}
+.showContent {
+-webkit-box-ordinal-group: 2;
+-moz-box-ordinal-group: 2;
+box-ordinal-group: 2;
+}
+.mapArea {
+-webkit-box-ordinal-group: 1;
+-moz-box-ordinal-group: 1;
+box-ordinal-group: 1;
+}
+/* Source: stackoverflow */
+
+ .wrap-all-content{
+    text-align: center;
+ }   
+ .content{
+    text-align: center;
+ }  
+ .content>div{
+    margin-bottom: 4vw;
+ }
+ 
+ .mapArea{
+    text-align: center;
+ }
+ .animalInfo{
+    text-align: center;
+    width:100%;
+ }
+ .myAnimal{
+    width:100%;
+    text-align: center;
+ }
+ .map_wrap{
+    width:100%;
+    height:50vw;
+ }
+ .mapArea{
+    width: 100%;
+ }
+ .infoTitle, .infoText{
+    text-align: left;
+ }
+ .bottom_content{
+    display: inline-block;
+    text-align: center;
+
+
+ }
+ .offical, .eventCalendar{
+    margin-bottom: 6vw;
+    width:100%;
+    display: inline-block;
+ }
+.offical>div{
+    width:100%;
+}
+#inputArea, #addArea{
+    height:5vw;
+    font-size: 0.9rem;
+}
+footer>p{
+    font-size: 0.9rem;
+}
+.grid-item{
+    height:5vw;
+}
+.nav-list2{
+   display: none;
+}
+
+}
+
+
+@media screen and (max-width:767px){
+    .content {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+        box-pack: center;
+        }
+    .myAnimal{
+        -webkit-box-ordinal-group: 3;
+        -moz-box-ordinal-group: 3;
+        box-ordinal-group: 3;
+    }
+    .showContent {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+    }
+    .mapArea {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+    }
+    /* Source: stackoverflow */
+    
+     .wrap-all-content{
+        text-align: center;
+     }   
+     .content{
+        text-align: center;
+     }  
+     .content>div{
+        margin-bottom: 4vw;
+     }
+     
+     .mapArea{
+        text-align: center;
+     }
+     .animalInfo{
+        text-align: center;
+        width:100%;
+     }
+     .myAnimal{
+        width:100%;
+        text-align: center;
+     }
+     .map_wrap{
+        width:100%;
+        height:50vw;
+     }
+     .mapArea{
+        width: 100%;
+     }
+     .infoTitle, .infoText{
+        text-align: left;
+     }
+     .bottom_content{
+        display: inline-block;
+        text-align: center;
+    
+    
+     }
+     .offical, .eventCalendar{
+        margin-bottom: 6vw;
+        width:100%;
+        display: inline-block;
+     }
+    .offical>div{
+        width:100%;
+    }
+    .offical>div{
+        width:100%;
+    }
+    #inputArea, #addArea{
+        height:5vw;
+        font-size: 0.4rem;
+    }
+    footer>p{
+        font-size: 0.4rem;
+    }
+    .grid-item{
+        height:5vw;
+    }
+    .bx-menu{
+      display:unset;
+    }
+    .bx-menu:hover{
+      cursor: pointer;
+    }
+    .nav-list{
+      display: none;
+    }
+    .show{
+      display: block;
+    }
+    .nav-list2{
+      float:right;
+      margin-right: 3.5%;
+      background-color: #fff;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      display: none;
+   }
+   .showMenu{
+      display: block;
+   }
+
+
+ 
+    
+
+}

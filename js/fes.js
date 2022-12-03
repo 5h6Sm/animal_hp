@@ -1,5 +1,4 @@
-"use strict";
-const text = document.querySelector(".text")
+let text = document.querySelector(".text")
 let index = 0;
 
 var recordbtn = document.querySelector(".recordbtn");
