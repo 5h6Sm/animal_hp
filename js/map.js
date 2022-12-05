@@ -4,7 +4,7 @@ let lon = document.querySelector("#longitude").innerText;
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
         center: new kakao.maps.LatLng(lat, lon), // 지도의 중심좌표
-        level: 1 // 지도의 확대 레벨
+        level:  3// 지도의 확대 레벨
     };  
 
 // 지도를 생성합니다    
@@ -30,6 +30,7 @@ map.setCenter(coords);
 
 // 현재 지도 중심좌표로 주소를 검색해서 지도 좌측 상단에 표시합니다
 searchAddrFromCoords(map.getCenter(), displayCenterInfo);
+map.relayout()
 
 // 지도를 클릭했을 때 클릭 위치 좌표에 대한 주소정보를 표시하도록 이벤트를 등록합니다
 kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
